@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%h1 Candidates
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Party
+      %th Age
+      %th Gender
+      %th Issue
+      %th{:colspan => "3"}
+
+
+
+  %tbody
+  - @candidates.each do |candidate|
+    %tr
+      %td= candidate.name
+      %td= candidate.party
+      %td= candidate.age
+      %td= candidate.gender
+      %td= candidate.issue
+      %td= link_to 'Show', candidate
+      %td= link_to 'Edit', edit_candidate_path(candidate)
+      %td= link_to 'Destroy', candidate, method: :delete, data: { confirm: 'Are you sure?' }
