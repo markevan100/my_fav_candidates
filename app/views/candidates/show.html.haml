@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %strong Name:
+  = @candidate.name
+
+
+%p
+  %strong Party:
+  = @candidate.party
+
+
+%p
+  %strong Age:
+  = @candidate.age
+
+
+%p
+  %strong Gender:
+  = @candidate.gender
+
+
+%p
+  %strong Issue:
+  = @candidate.issue
+
+
+= link_to 'Edit', edit_candidate_path(@candidate)
+|
+= link_to 'Back', candidates_path

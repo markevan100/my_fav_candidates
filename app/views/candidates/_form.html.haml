@@ -1,0 +1,24 @@
+= form_with(model: candidate, local: true) do |form|
+
+  .field
+    = form.label :name
+    = form.text_field :name
+
+  .field
+    = form.label :party
+    = form.text_field :party
+
+  .field
+    = form.label :age
+    = form.number_field :age
+
+  .field
+    = form.label :gender
+    = form.text_field :gender
+
+  .field
+    = form.label :issue
+    = form.text_field :issue
+
+  .actions
+    = form.submit
